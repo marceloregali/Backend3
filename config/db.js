@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
-dotenv.config(); // Cargar variables de entorno
+dotenv.config();
+
+mongoose.set("strictQuery", false);
 
 const connectDB = async () => {
   try {
@@ -9,10 +11,10 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log(" Conectado a MongoDB Atlas");
+    console.log("Conectado a MongoDB correctamente");
   } catch (error) {
-    console.error(" Error de conexión a MongoDB:", error);
-    process.exit(1); // Cerrar la app en caso de error
+    console.error("Error al conectar a MongoDB:", error);
+    process.exit(1); // Cierra el proceso en caso de error
   }
 };
 

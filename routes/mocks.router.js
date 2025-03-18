@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { generateUsers, generatePets } from "../utils/mocking.js";
-import Users from "../dao/Users.dao.js";
-import Pets from "../dao/Pets.dao.js";
+import { generateUsers, generatePets } from "../../utils/mocking.js";
+import Users from "../../dao/Users.dao.js";
+import Pets from "../../dao/Pets.dao.js";
 import bcrypt from "bcrypt";
 
 const router = Router();
 
-// Endpoint GET para generar usuarios ficticios
+//  GET para generar usuarios ficticios
 router.get("/mockingusers", async (req, res) => {
   try {
     const users = generateUsers(50);
@@ -16,12 +16,12 @@ router.get("/mockingusers", async (req, res) => {
   }
 });
 
-// Endpoint POST para generar e insertar datos en la BD
+//  POST para generar e insertar datos en la BD
 router.post("/generateData", async (req, res) => {
   try {
     const { users, pets } = req.body;
 
-    // Generar usuarios y encriptar contraseñas
+    // Genero usuarios y encriptar contraseñas
     const userDocs = generateUsers(users).map((user) => ({
       ...user,
       password: bcrypt.hashSync(user.password, 10),

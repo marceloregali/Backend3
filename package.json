@@ -2,17 +2,18 @@
   "name": "plantilladocumentacion",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "mocha test/supertest.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@faker-js/faker": "^9.6.0",
     "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",

@@ -9,9 +9,11 @@ import adoptionsRouter from "./routes/adoption.router.js";
 import sessionsRouter from "./routes/sessions.router.js";
 import mocksRouter from "./routes/mocks.router.js";
 
-dotenv.config(); // Cargar las variables de entorno
+dotenv.config();
+
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
+const MONGO_URI = process.env.MONGO_URI;
 
 // Conectar a MongoDB
 connectDB();
@@ -19,10 +21,12 @@ connectDB();
 app.use(express.json());
 app.use(cookieParser());
 
+// Rutas
 app.use("/api/users", usersRouter);
 app.use("/api/pets", petsRouter);
 app.use("/api/adoptions", adoptionsRouter);
 app.use("/api/sessions", sessionsRouter);
 app.use("/api/mocks", mocksRouter);
 
-app.listen(PORT, () => console.log(` Servidor en http://localhost:${PORT}`));
+//  servidor
+app.listen(PORT, () => console.log(`Servidor en http://localhost:${PORT}`));
