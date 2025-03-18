@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { generateUsers, generatePets } from "../../utils/mocking.js";
-import Users from "../../dao/Users.dao.js";
-import Pets from "../../dao/Pets.dao.js";
+import { generateUsers, generatePets } from "../utils/mocking.js";
+import Users from "../dao/Users.dao.js";
+import Pets from "../dao/Pets.dao.js";
 import bcrypt from "bcrypt";
 
 const router = Router();
