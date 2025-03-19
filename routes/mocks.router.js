@@ -6,7 +6,7 @@ import bcrypt from "bcrypt";
 
 const router = Router();
 
-//  GET para generar usuarios ficticios
+// GET  genera usuarios ficticios
 router.get("/mockingusers", async (req, res) => {
   try {
     const users = generateUsers(50);
@@ -16,12 +16,26 @@ router.get("/mockingusers", async (req, res) => {
   }
 });
 
-//  POST para generar e insertar datos en la BD
+// GET  genera mascotas ficticias
+router.get("/mockingpets", async (req, res) => {
+  try {
+    const pets = generatePets(50);
+    res.json(pets);
+  } catch (error) {
+    res.status(500).json({ error: "Error generando mascotas" });
+  }
+});
+
 router.post("/generateData", async (req, res) => {
   try {
     const { users, pets } = req.body;
 
-    // Genero usuarios y encriptar contraseñas
+    // Validación de entrada
+    if (!users || !pets || isNaN(users) || isNaN(pets)) {
+      return res.status(400).json({ error: "Parámetros inválidos" });
+    }
+
+    // Genero usuarios y encripto contraseñas
     const userDocs = generateUsers(users).map((user) => ({
       ...user,
       password: bcrypt.hashSync(user.password, 10),
@@ -29,6 +43,7 @@ router.post("/generateData", async (req, res) => {
 
     const petDocs = generatePets(pets);
 
+    // Inserto en la base de datos
     await Users.insertMany(userDocs);
     await Pets.insertMany(petDocs);
 
