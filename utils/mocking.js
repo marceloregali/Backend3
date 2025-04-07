@@ -1,12 +1,11 @@
 import { faker } from "@faker-js/faker";
-import bcrypt from "bcrypt";
 
 export const generateUsers = (count) => {
   return Array.from({ length: count }, () => ({
     firstName: faker.person.firstName(),
     lastName: faker.person.lastName(),
     email: faker.internet.email(),
-    password: bcrypt.hashSync("coder123", 10),
+    password: "coder123",
     role: faker.helpers.arrayElement(["user", "admin"]),
     pets: [],
   }));
@@ -15,17 +14,8 @@ export const generateUsers = (count) => {
 export const generatePets = (count) => {
   return Array.from({ length: count }, () => ({
     name: faker.animal.dog(),
-    breed: faker.helpers.arrayElement([
-      "Siamese",
-      "Persian",
-      "Maine Coon",
-      "Bengal",
-      "Sphynx",
-    ]),
+    breed: faker.animal.cat(),
     age: faker.number.int({ min: 1, max: 15 }),
-    owner: null,
+    owner: null, // Simular referencia si querés
   }));
 };
-
-console.log(generateUsers(5));
-console.log(generatePets(5));
