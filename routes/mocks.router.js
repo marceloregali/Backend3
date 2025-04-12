@@ -6,41 +6,36 @@ import bcrypt from "bcrypt";
 
 const router = Router();
 
-// GET: genera 50 usuarios ficticios con contraseña hasheada
+// GET: Generar 50 usuarios de prueba
 router.get("/mockingusers", async (req, res) => {
   try {
-    const users = generateUsers(50).map((user) => ({
-      ...user,
-      password: bcrypt.hashSync(user.password, 10),
-    }));
+    const users = generateUsers(50);
     res.status(200).json(users);
   } catch (error) {
+    console.error("Error generando usuarios:", error);
     res.status(500).json({ error: "Error generando usuarios" });
   }
 });
 
-// GET: genera mascotas ficticias (simulación)
-router.get("/mockingpets", (req, res) => {
+// GET: Endpoint original de mockingpets (si lo tenías antes)
+router.get("/mockingpets", async (req, res) => {
   try {
-    const pets = generatePets(20);
+    const pets = generatePets(30);
     res.status(200).json(pets);
   } catch (error) {
+    console.error("Error generando mascotas:", error);
     res.status(500).json({ error: "Error generando mascotas" });
   }
 });
 
-// POST: genera e inserta usuarios y mascotas en la base de datos
+// POST: Generar e insertar usuarios y mascotas en la base de datos
 router.post("/generateData", async (req, res) => {
   try {
     const { users = 0, pets = 0 } = req.body;
 
-    if (isNaN(users) || isNaN(pets)) {
-      return res.status(400).json({ error: "Parámetros inválidos" });
-    }
-
     const userDocs = generateUsers(users).map((user) => ({
       ...user,
-      password: bcrypt.hashSync(user.password, 10),
+      password: bcrypt.hashSync(user.password, 10), // Encriptar
     }));
 
     const petDocs = generatePets(pets);
@@ -49,10 +44,10 @@ router.post("/generateData", async (req, res) => {
     await Pets.insertMany(petDocs);
 
     res
-      .status(201)
+      .status(200)
       .json({ message: "Datos generados e insertados correctamente" });
   } catch (error) {
-    console.error("Error en /generateData:", error);
+    console.error("Error insertando datos:", error);
     res.status(500).json({ error: "Error insertando datos en la BD" });
   }
 });
