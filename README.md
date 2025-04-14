@@ -2,17 +2,6 @@
 
 <h1 align="center">Marcelo Regali <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"></h1>
 
-<p>
-<div align="center">
-  <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=html5&logoColor=c58545&labelColor=282828">
-  <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=css3&logoColor=d1a01f&labelColor=282828">
-  <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=python&logoColor=98b982&labelColor=282828">
-    <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=Express&logoColor=c58545&labelColor=282828">
-  <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=MongoDB&logoColor=d1a01f&labelColor=282828">
-  <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=GitHud&logoColor=98b982&labelColor=282828">
-</div>
-</p>
-
 ## Este proyecto fue desarrollado como parte de un desafío de backend, donde se implementó un sistema de generación de datos simulados utilizando Faker.js, en combinación con una base de datos MongoDB.
 
 ## El objetivo principal fue crear endpoints capaces de generar y manipular datos falsos (mock data) para simular usuarios y mascotas dentro de una aplicación de adopción. Para ello, se crearon rutas específicas que permiten:
@@ -29,7 +18,16 @@
 
 ## Este entorno es ideal para pruebas y simulaciones sin comprometer datos reales, y representa una sólida base para escalar la aplicación en un entorno real de adopción de mascotas.
 
-### Créditos Finales
+<p>
+<div align="center">
+  <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=html5&logoColor=c58545&labelColor=282828">
+  <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=css3&logoColor=d1a01f&labelColor=282828">
+  <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=python&logoColor=98b982&labelColor=282828">
+    <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=Express&logoColor=c58545&labelColor=282828">
+  <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=MongoDB&logoColor=d1a01f&labelColor=282828">
+  <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=GitHud&logoColor=98b982&labelColor=282828">
+</div>
+</p>
 
 ### Carrera( Backend con Node.js - Coderhouse)
 
