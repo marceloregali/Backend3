@@ -26,6 +26,10 @@
     <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=Express&logoColor=c58545&labelColor=282828">
   <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=MongoDB&logoColor=d1a01f&labelColor=282828">
   <img src="https://img.shields.io/badge/-Python-98b982?style=for-the-badge&logo=GitHud&logoColor=98b982&labelColor=282828">
+  <img src=https://img.shields.io/badge/github-%2300acee.svg?color=181717&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+
+<a href="mailto:ossinsight@p
+
 </div>
 </p>
 
