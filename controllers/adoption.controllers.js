@@ -1,4 +1,3 @@
-// controllers/adoption.controllers.js
 import Users from "../dao/Users.dao.js";
 import Pets from "../dao/Pets.dao.js";
 

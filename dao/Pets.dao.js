@@ -1,23 +1,48 @@
 import petModel from "./models/Pet.js";
 
 export default class Pet {
-  get = (params) => {
-    return petModel.find(params);
+  // Obtengo múltiples registros de acuerdo a los parámetros
+  get = async (params) => {
+    try {
+      return await petModel.find(params);
+    } catch (error) {
+      throw new Error("Error al obtener las mascotas");
+    }
   };
 
-  getBy = (params) => {
-    return petModel.findOne(params);
+  // Obtengo un único registro según los parámetros
+  getBy = async (params) => {
+    try {
+      return await petModel.findOne(params);
+    } catch (error) {
+      throw new Error("Error al obtener la mascota");
+    }
   };
 
-  save = (doc) => {
-    return petModel.create(doc);
+  // Guardo un nuevo registro
+  save = async (doc) => {
+    try {
+      return await petModel.create(doc);
+    } catch (error) {
+      throw new Error("Error al guardar la mascota");
+    }
   };
 
-  update = (id, doc) => {
-    return petModel.findByIdAndUpdate(id, { $set: doc }, { new: true });
+  // Actualizo un registro existente
+  update = async (id, doc) => {
+    try {
+      return await petModel.findByIdAndUpdate(id, { $set: doc }, { new: true });
+    } catch (error) {
+      throw new Error("Error al actualizar la mascota");
+    }
   };
 
-  delete = (id) => {
-    return petModel.findByIdAndDelete(id);
+  // Elimino un registro
+  delete = async (id) => {
+    try {
+      return await petModel.findByIdAndDelete(id);
+    } catch (error) {
+      throw new Error("Error al eliminar la mascota");
+    }
   };
 }

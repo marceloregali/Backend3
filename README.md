@@ -23,6 +23,7 @@
   <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=html5&logoColor=c58545&labelColor=282828">
   <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=css3&logoColor=d1a01f&labelColor=282828">
    <img alt="NodeJS" src="https://img.shields.io/badge/Node.js%20-%2343853D.svg?logo=node.js&logoColor=white">
+   <img src=https://img.shields.io/badge/github-%2300acee.svg?color=181717&style=for-the-badge&logo=github&logoColor=white     alt=github style="margin-bottom: 5px;" />
   <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=Express&logoColor=c58545&labelColor=282828">
   <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=css3&logoColor=d1a01f&labelColor=282828">
   <img src=https://img.shields.io/badge/github-%2300acee.svg?color=181717&style=for-the-badge&logo=github&logoColor=white     alt=github style="margin-bottom: 5px;" />
@@ -30,7 +31,58 @@
   </div>
 </p>
 
-### Carrera( Backend con Node.js - Coderhouse)
+## Project setup
+
+#### Instalá las dependencias del proyecto con:
+
+## ```bash
+
+#### $ npm install
+
+## Development
+
+#### $ npm run start
+
+## Watch Mode
+
+## $ npm run start:dev
+
+## Production Mode
+
+#### $ npm run start:prod
+
+## Run Tests
+
+#### $ npm run test
+
+## End-to-End (e2e) Tests
+
+#### $ npm run test:e2e
+
+## Test Coverage
+
+#### $ npm run test:cov
+
+# 📄 Documentación de la APIEste proyecto cuenta con documentación Swagger disponible en:
+
+## 📄 Documentación de la API
+
+<p>
+<div align="center">
+  <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=html5&logoColor=c58545&labelColor=282828">
+  <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=css3&logoColor=d1a01f&labelColor=282828">
+   <img alt="NodeJS" src="https://img.shields.io/badge/Node.js%20-%2343853D.svg?logo=node.js&logoColor=white">
+   <img src=https://img.shields.io/badge/github-%2300acee.svg?color=181717&style=for-the-badge&logo=github&logoColor=white     alt=github style="margin-bottom: 5px;" />
+  <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=Express&logoColor=c58545&labelColor=282828">
+  <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=css3&logoColor=d1a01f&labelColor=282828">
+  <img src=https://img.shields.io/badge/github-%2300acee.svg?color=181717&style=for-the-badge&logo=github&logoColor=white     alt=github style="margin-bottom: 5px;" />
+  <img alt="NodeJS" src="https://img.shields.io/badge/Node.js%20-%2343853D.svg?logo=node.js&logoColor=white">
+  </div>
+</p>
+
+# Programacion backend III
+
+#### Carrera( Backend con Node.js - Coderhouse)
 
 ### Comisión: 74580
 
@@ -40,14 +92,6 @@
 
 ## “Fue un desafío muy completo, aprendí mucho en esta etapa del curso.”
 
-<p>
-<div align="center">
-  <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=html5&logoColor=c58545&labelColor=282828">
-  <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=css3&logoColor=d1a01f&labelColor=282828">
-   <img alt="NodeJS" src="https://img.shields.io/badge/Node.js%20-%2343853D.svg?logo=node.js&logoColor=white">
-  <img src="https://img.shields.io/badge/-HTML-c58545?style=for-the-badge&logo=Express&logoColor=c58545&labelColor=282828">
-  <img src="https://img.shields.io/badge/-CSS-d1a01f?style=for-the-badge&logo=css3&logoColor=d1a01f&labelColor=282828">
-  <img src=https://img.shields.io/badge/github-%2300acee.svg?color=181717&style=for-the-badge&logo=github&logoColor=white     alt=github style="margin-bottom: 5px;" />
-  <img alt="NodeJS" src="https://img.shields.io/badge/Node.js%20-%2343853D.svg?logo=node.js&logoColor=white">
-  </div>
-</p>
+```
+
+```

@@ -5,7 +5,7 @@ import { INestApplication, Logger } from "@nestjs/common";
 async function bootstrap() {
   const PORT = process.env.PORT ?? 3007;
   let app: INestApplication<any> = await NestFactory.create(AppModule);
-  // app=109
+
   await app.listen(PORT);
   Logger.debug(`Server escuchando en puerto ${PORT}`, "App Principal");
 }

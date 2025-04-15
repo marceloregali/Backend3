@@ -6,7 +6,7 @@ import bcrypt from "bcrypt";
 
 const router = Router();
 
-// GET: Generar 50 usuarios de prueba
+// GET: Genero 50 usuarios de prueba
 router.get("/mockingusers", async (req, res) => {
   try {
     const users = generateUsers(50);
@@ -17,7 +17,7 @@ router.get("/mockingusers", async (req, res) => {
   }
 });
 
-// GET: Endpoint original de mockingpets (si lo tenías antes)
+// GET: Endpoint original de mockingpets
 router.get("/mockingpets", async (req, res) => {
   try {
     const pets = generatePets(30);
@@ -28,14 +28,34 @@ router.get("/mockingpets", async (req, res) => {
   }
 });
 
-// POST: Generar e insertar usuarios y mascotas en la base de datos
+// GET: obtengo todos los usuarios de la base de datos
+router.get("/dbusers", async (req, res) => {
+  try {
+    const users = await Users.find();
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ error: "Error obteniendo usuarios de la BD" });
+  }
+});
+
+// GET : obtengo todas las mascotas de la base de datos
+router.get("/dbpets", async (req, res) => {
+  try {
+    const pets = await Pets.find();
+    res.json(pets);
+  } catch (error) {
+    res.status(500).json({ error: "Error obteniendo mascotas de la BD" });
+  }
+});
+
+// POST: Genero e insertar usuarios y mascotas en la base de datos
 router.post("/generateData", async (req, res) => {
   try {
     const { users = 0, pets = 0 } = req.body;
 
     const userDocs = generateUsers(users).map((user) => ({
       ...user,
-      password: bcrypt.hashSync(user.password, 10), // Encriptar
+      password: bcrypt.hashSync(user.password, 10),
     }));
 
     const petDocs = generatePets(pets);

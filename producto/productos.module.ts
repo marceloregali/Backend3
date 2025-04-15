@@ -9,7 +9,6 @@ import { ProductosController } from "./productos.controller";
 })
 export class ProductosModule {
   constructor() {
-    // console.log(process.env.MONGO_URL)
     Logger.debug(
       `MONGO URL (var entorno): ${process.env.MONGO_URL}`,
       "ProductosModulo"

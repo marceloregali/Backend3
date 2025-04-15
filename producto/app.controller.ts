@@ -55,8 +55,7 @@ export class AppController {
     datos: AddUser
   ) {
     console.log(datos);
-    // datos.estatura=1.7
-    // return this.appService.getUsuarios()
+
     return this.appService.creaUsuario(datos);
   }
 
@@ -71,8 +70,6 @@ export class AppController {
     @Param("b") sumando2: number,
     @Query("nombre") nombre: string
   ): number {
-    // sumando2="Pedro"
-    // nombre=false
     Logger.debug(nombre);
 
     sumando1 = Number(sumando1);
@@ -89,12 +86,8 @@ export class AppController {
     @Param("b", ParseIntPipe) sumando2: number,
     @Query("nombre") nombre: string
   ): number {
-    // sumando2="Pedro"
-    // nombre=false
     Logger.debug(nombre);
 
-    // sumando1=Number(sumando1)
-    // sumando2=Number(sumando2)
     if (isNaN(sumando1) || isNaN(sumando2)) {
       throw new BadRequestException(`Los argumentos deben ser numéricos`);
     }

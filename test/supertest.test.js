@@ -1,6 +1,6 @@
 import chai from "chai";
 import chaiHttp from "chai-http";
-import app from "../app.js"; // Asegurate de que esta ruta sea correcta
+import app from "../app.js";
 
 const expect = chai.expect;
 chai.use(chaiHttp);

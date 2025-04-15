@@ -15,7 +15,6 @@ export const login = async (req, res) => {
       return res.status(401).json({ error: "Contraseña incorrecta" });
     }
 
-    // Aquí podrías guardar en sesión o generar un token
     req.session.user = {
       _id: user._id,
       email: user.email,

@@ -1,23 +1,48 @@
 import userModel from "./models/User.js";
 
 export default class Users {
-  get = (params) => {
-    return userModel.find(params);
+  // Obtengo múltiples registros de acuerdo a los parámetros
+  get = async (params) => {
+    try {
+      return await userModel.find(params);
+    } catch (error) {
+      throw new Error("Error al obtener los usuarios");
+    }
   };
 
-  getBy = (params) => {
-    return userModel.findOne(params);
+  // Obtengo un único registro según los parámetros
+  getBy = async (params) => {
+    try {
+      return await userModel.findOne(params);
+    } catch (error) {
+      throw new Error("Error al obtener el usuario");
+    }
   };
 
-  save = (doc) => {
-    return userModel.create(doc);
+  // Guardo un nuevo registro
+  save = async (doc) => {
+    try {
+      return await userModel.create(doc);
+    } catch (error) {
+      throw new Error("Error al guardar el usuario");
+    }
   };
 
-  update = (id, doc) => {
-    return userModel.findByIdAndUpdate(id, { $set: doc });
+  // Actualizo un registro existente
+  update = async (id, doc) => {
+    try {
+      return await userModel.findByIdAndUpdate(id, { $set: doc });
+    } catch (error) {
+      throw new Error("Error al actualizar el usuario");
+    }
   };
 
-  delete = (id) => {
-    return userModel.findByIdAndDelete(id);
+  // Elimino un registro
+  delete = async (id) => {
+    try {
+      return await userModel.findByIdAndDelete(id);
+    } catch (error) {
+      throw new Error("Error al eliminar el usuario");
+    }
   };
 }

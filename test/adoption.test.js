@@ -15,6 +15,4 @@ describe("Testing Adoption Router", () => {
     expect(res.status).toBe(201);
     expect(res.body.petId).toBe(newAdoption.petId);
   });
-
-  // Añadir más pruebas según los endpoints de tu router
 });
