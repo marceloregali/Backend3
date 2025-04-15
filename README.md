@@ -35,8 +35,6 @@
 
 #### Instalá las dependencias del proyecto con:
 
-## ```bash
-
 #### $ npm install
 
 ## Development
